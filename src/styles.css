@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background: url(img/bg-pet-2.jpg);
+    background: url(assets/img/bg-pet-2.jpg);
     padding: 0;
     margin: 0;
     font-family: 'Ubuntu Condensed';
@@ -26,12 +26,12 @@ body {
   #logo {
     width: 68px;
     height: 91px;
-    background: url(img/logo-pet.png) no-repeat;
+    background: url(assets/img/logo-pet.png) no-repeat;
     float: left;
     margin: 10px 20px 0 20px;
   }
   #logo:hover {
-    background: url(img/logo-pet-hover.png) no-repeat;
+    background: url(assets/img/logo-pet-hover.png) no-repeat;
   }
   
   #menu {

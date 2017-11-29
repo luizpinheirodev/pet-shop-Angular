@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'ttt-product',
@@ -7,11 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  @Input() product: any
+  @Input() product: Product
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

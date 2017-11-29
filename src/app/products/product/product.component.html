@@ -1,4 +1,5 @@
 <div class="produto">
   <p>{{product.name}}</p>
   <span>{{product.description}}</span>
+  <a [routerLink]="['/produtos', product.id]">Ver detalhes</a>
 </div>
