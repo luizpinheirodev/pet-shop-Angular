@@ -1,0 +1,20 @@
+<h1>Cadastro de Produto</h1>
+
+<form #form="ngForm">
+
+    <label for="name">Nome: </label>
+    <input type="text" name="name" id="" [(ngModel)]="product.name">
+  <br>
+    <label for="description">Descrição: </label>
+    <input type="text" name="description" id="" [(ngModel)]="product.description">
+  <br>
+    <label for="url">URL: </label>
+    <input type="text" name="url" id="" [(ngModel)]="product.url">
+  <br>
+    <label for="price">Preço: </label>
+    <input type="number" name="price" id="" [(ngModel)]="product.price">
+  <br>
+    <button (click)="enviarProduto()" type="submit">Salvar</button>
+  <br>
+    {{ product | json }}
+</form>

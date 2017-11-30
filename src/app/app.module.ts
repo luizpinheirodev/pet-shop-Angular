@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { ROUTES } from './app.routes';  
 
@@ -13,6 +14,8 @@ import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './products/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailComponent } from './products/detail/detail.component';
+import { ProductsService } from './products/products.service';
+import { FormComponent } from './products/form/form.component';
 
 
 @NgModule({
@@ -24,14 +27,18 @@ import { DetailComponent } from './products/detail/detail.component';
     HomeComponent,
     ProductsComponent,
     ProductComponent,
-    DetailComponent
+    DetailComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),  //inserido
+    FormsModule, //inserido - para inserir o two-way databind
     HttpClientModule //inserido ->permissão para Request
   ],
-  providers: [],
+  providers: [
+    ProductsService //inserido
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

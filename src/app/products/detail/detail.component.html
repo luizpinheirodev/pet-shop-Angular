@@ -1,5 +1,24 @@
 <h1>Detalhe do produto</h1>
 
-<p>{{product?.name}}</p>
-<br>
-<span>{{product?.description}}</span>
+<section class="detalhes">
+
+    <div class="img">
+        <img [src]="product?.url">
+    </div>
+
+
+    <p>Nome: {{product.name}}</p>
+    
+    <p>Descrição: {{product.description}}</p>
+
+    <div class="price">
+        <p>Valor: <b>{{product.price | currency:'BRL'}}</b></p>
+    </div>
+    
+    <br>
+    <br>
+    {{today | date:'dd/MM/yyyy'}}
+
+    
+
+</section>
