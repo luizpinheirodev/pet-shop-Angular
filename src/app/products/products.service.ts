@@ -8,19 +8,6 @@ import 'rxjs/add/operator/map';
 export class ProductsService{
     constructor(private http: HttpClient){}
 
-    getDetail(id: number) : Observable<Product>{
-        return this.http.get(`http://localhost:3000/products/${id}`)
-            .map((data:any)=> {
-                    const product = new Product()
-                    product.id  = data.id;
-                    product.name = data.name;
-                    product.description = data.description;
-                    product.url = data.url;
-                    return product;
-                }
-            )
-    }
-
     getAll() : Observable<Product[]> {
         return this.http.get('http://localhost:3000/products')
             //map do rxjs
@@ -38,5 +25,28 @@ export class ProductsService{
                 })
             })
     }
+
+    getDetail(id: number) : Observable<Product>{
+        return this.http.get(`http://localhost:3000/products/${id}`)
+            .map((data:any)=> {
+                    const product = new Product()
+                    product.id  = data.id;
+                    product.name = data.name;
+                    product.description = data.description;
+                    product.url = data.url;
+                    return product;
+                }
+            )
+    }
+
+    insert(product: Product) : Observable<any> {
+        return this.http.post(`http://localhost:3000/products/`, product)
+            .map((res: any) => {
+                console.log(res);
+                debugger;
+                return
+            })
+    }
+
 
 }

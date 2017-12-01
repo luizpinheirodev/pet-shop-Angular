@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product/product.model';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'ttt-form',
@@ -10,13 +11,23 @@ export class FormComponent implements OnInit {
 
   product: Product = new Product
 
-  constructor() { }
+  constructor(private productsService: ProductsService) { }
+  // ou abaixo
+  /*
+  constructor(){
+    this.productsService = new ProductsService()
+  }
+  */
 
   ngOnInit() {
   }
 
   enviarProduto(){
-    alert('vai enviar')
+    this.productsService.insert(this.product).subscribe(
+      data=>{},
+      error=>{}
+    )
+    //alert('vai enviar')
   }
 
 }
