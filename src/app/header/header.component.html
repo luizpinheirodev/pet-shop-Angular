@@ -3,6 +3,7 @@
     
     <div id="logo" onmouseover="late();"></div>
     <h1>PET SHOP</h1>
+    
     <div class="clear"></div> <!-- servira como um divisor (clearfix) -->
     <nav id="menu">
       <a id="home" routerLinkActive="active" routerLink="inicio">home</a>
@@ -11,5 +12,6 @@
       <a id="servicos" routerLinkActive="active" routerLink="#">serviços</a>
       <a id="contato" routerLinkActive="active" routerLink="contato">contato</a>
     </nav>
+    <button (click)="doLogout()">Sair</button>
   </div>
 </header>

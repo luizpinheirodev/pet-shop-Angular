@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product/product.model';
 import { ProductsService } from '../products.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ttt-form',
@@ -11,7 +12,8 @@ export class FormComponent implements OnInit {
 
   product: Product = new Product
 
-  constructor(private productsService: ProductsService) { }
+  constructor(private productsService: ProductsService,
+              private router: Router) { }
   // ou abaixo
   /*
   constructor(){
@@ -24,8 +26,24 @@ export class FormComponent implements OnInit {
 
   enviarProduto(){
     this.productsService.insert(this.product).subscribe(
-      data=>{},
-      error=>{}
+      data=>{
+        this.router.navigate(['/produtos'])
+      },
+      error=>{
+
+      }
+    )
+    //alert('vai enviar')
+  }
+
+  deletarProduto(id){
+    this.productsService.delete(id).subscribe(
+      data=>{
+        this.router.navigate(['/produtos'])
+      },
+      error=>{
+        
+      }
     )
     //alert('vai enviar')
   }

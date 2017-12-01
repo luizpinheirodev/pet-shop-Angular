@@ -34,6 +34,7 @@ export class ProductsService{
                     product.name = data.name;
                     product.description = data.description;
                     product.url = data.url;
+                    product.price = data.price;
                     return product;
                 }
             )
@@ -42,8 +43,17 @@ export class ProductsService{
     insert(product: Product) : Observable<any> {
         return this.http.post(`http://localhost:3000/products/`, product)
             .map((res: any) => {
-                console.log(res);
-                debugger;
+                //console.log(res);
+                //debugger;
+                return
+            })
+    }
+
+    delete(id: number) : Observable<any> {
+        return this.http.delete(`http://localhost:3000/products/${id}`)
+            .map((res: any) => {
+                //console.log(res);
+                //debugger;
                 return
             })
     }

@@ -41,6 +41,28 @@
       "url": "https://www.google.com.br/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjBzIvL1-jXAhXBTZAKHZIgCycQjRwIBw&url=http%3A%2F%2Fcasadaconsultoria.com.br%2Fa-importancia-da-embalagem-do-produto%2F&psig=AOvVaw06zuRX-hq9q5JqOSaS7Pbm&ust=1512213271802687",
       "price": 100,
       "id": 6
+    },
+    {
+      "name": "Produto",
+      "description": "Aa",
+      "url": "https://www.google.com.br/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjBzIvL1-jXAhXBTZAKHZIgCycQjRwIBw&url=http%3A%2F%2Fcasadaconsultoria.com.br%2Fa-importancia-da-embalagem-do-produto%2F&psig=AOvVaw06zuRX-hq9q5JqOSaS7Pbm&ust=1512213271802687",
+      "price": 4,
+      "id": 7
+    },
+    {
+      "name": "Ultimo Produto",
+      "description": "desc Produto",
+      "url": "http://casadaconsultoria.com.br/wp-content/uploads/2012/05/A-importancia-da-embalagem-do-produto-300x213.jpg",
+      "price": 100,
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Administrador",
+      "username": "admin",
+      "password": "1"
     }
   ]
 }

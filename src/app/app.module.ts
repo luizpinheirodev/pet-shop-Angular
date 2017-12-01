@@ -16,6 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetailComponent } from './products/detail/detail.component';
 import { ProductsService } from './products/products.service';
 import { FormComponent } from './products/form/form.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
+import { AuthService } from './auth.service';
 
 
 @NgModule({
@@ -28,7 +31,8 @@ import { FormComponent } from './products/form/form.component';
     ProductsComponent,
     ProductComponent,
     DetailComponent,
-    FormComponent
+    FormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,9 @@ import { FormComponent } from './products/form/form.component';
     HttpClientModule //inserido ->permissão para Request
   ],
   providers: [
-    ProductsService //inserido
+    ProductsService, //inserido
+    AuthGuard,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
